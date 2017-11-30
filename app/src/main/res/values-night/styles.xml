@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme.NoActionBar.Blue">
+        <!--<item name="colorPrimary">@color/colorPrimary_Blue</item>-->
+        <!--<item name="colorPrimaryDark">@color/colorPrimaryDark_Blue</item>-->
+        <item name="colorAccent">@android:color/white</item>
+    </style>
+
+
+    <style name="AppTheme.NoActionBar.Red">
+        <!--<item name="colorPrimary">@color/colorPrimary_Red</item>-->
+        <!--<item name="colorPrimaryDark">@color/colorPrimaryDark_Red</item>-->
+        <item name="colorAccent">@android:color/white</item>
+    </style>
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" >
+        <!--<item name="android:textColorPrimary">?colorAccent</item>-->
+        <!--<item name="android:textColorSecondary">?colorAccent</item>-->
+    </style>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark" />
+
+</resources>
