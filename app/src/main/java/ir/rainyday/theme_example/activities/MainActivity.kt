@@ -1,7 +1,7 @@
-package ir.rainyday.theme_example
+package ir.rainyday.theme_example.activities
 
 import android.os.Bundle
-import android.support.v7.widget.Toolbar
+import androidx.appcompat.widget.Toolbar
 import android.view.Menu
 import android.view.MenuItem
 import android.content.Intent
@@ -16,7 +16,7 @@ class MainActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_main)
-        val toolbar = findViewById(R.id.toolbar) as Toolbar
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
 
 
@@ -43,15 +43,5 @@ class MainActivity : BaseActivity() {
 
         return super.onOptionsItemSelected(item)
     }
-
-    override fun onResume() {
-        super.onResume()
-        if (MyApp.instance.ThemeChanged){
-            MyApp.instance.ThemeChanged=false
-            recreate()
-        }
-    }
-
-
 
 }

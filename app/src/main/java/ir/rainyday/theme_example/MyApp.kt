@@ -1,6 +1,7 @@
 package ir.rainyday.theme_example
 
 import android.app.Application
+import ir.rainyday.thememanager.ThemeManager
 
 /**
  * Created by mostafa-taghipour on 10/31/17.
@@ -8,18 +9,11 @@ import android.app.Application
 
 class  MyApp:Application(){
 
-    companion object{
-        lateinit var instance: MyApp
-            private set
-    }
-
-  var ThemeChanged : Boolean = false
 
     override fun onCreate() {
         super.onCreate()
-        instance =this
 
-        if (ThemeManager.getInstance(this).theme==0)
-            ThemeManager.getInstance(this).theme==R.style.AppTheme_NoActionBar_Red
+        ThemeManager.getInstance().currentTheme = ThemePrefrences.getInstance(this).theme ?: R.style.AppTheme_NoActionBar_Red
+        ThemeManager.getInstance().nightMode = ThemePrefrences.getInstance(this).nightMode
     }
 }
